@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../ProyectoJonay/vistas/css/css.css">
+    <script src="../ProyectoJonay/crudjs/login/login.js"></script>
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <h2>Iniciar Sesión</h2>
+    <form id="login-form" method="post">
+        <div>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario">
+        </div>
+        <div>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena">
+        </div>
+        <div>
+            <button type="submit">Iniciar Sesión</button>
+        </div>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scripts = document.querySelectorAll('script[src$=".js"]');
+            if (scripts.length === 0) {
+                const messageContainer = document.createElement('div');
+                messageContainer.classList.add('alert', 'alert-danger');
+                messageContainer.textContent = 'No se encontraron archivos .js, sin ellos no se podrán mostrar los datos ni hacer nada';
+                document.body.appendChild(messageContainer);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/css.css">
+    <title>Proyecto PRW Jonay</title>
+    <script src="../../crudjs/pacientes/editar_pacientes.js"></script>
+</head>
+<body>
+    <div class="cabecera">
+        <a href="../usuario/usuario.html">Usuarios</a>
+        <a href="../hospital/hospital.html">Hospitales</a>
+        <a href="../salas_espera/salas_espera.html">Salas de Espera</a> 
+        <a href="../pacientes/pacientes.html">Pacientes</a>
+        <a href="../expediente/expediente.html">Expedientes</a>
+        <a href="../personal/personal.html">Personal</a>
+        <a href="../tipo_personal/tipo_personal.html">Tipo Personal</a>
+        <a href="../medicos/medicos.html">Medicos</a>
+        <a href="../director/director.html">Directores</a>
+        <a href="../tipo_medicos/tipo_medicos.html">Tipo Medicos</a>
+        <a href="../analista/analista.html">Analistas</a>
+        <a href="../cirujano/cirujano.html">Cirujanos</a>
+    </div>
+
+    <div class="container">
+        <h2>Datos de Pacientes</h2>
+        <form id="formularioPacientes">
+            <div class="form-group">
+                <label for="cod_pac">Código de Paciente</label>
+                <input type="number" class="form-control" id="cod_pac" name="cod_pac" placeholder="" readonly> 
+            </div>
+            <div class="form-group">
+                <label for="dni_pac">DNI</label>
+                <input type="text" class="form-control" id="dni_pac" name="dni_pac" placeholder="" required> 
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" required> 
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad</label>
+                <input type="number" class="form-control" id="edad" name="edad" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="number" class="form-control" id="telefono" name="telefono" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="cod_hospital">Codigo de hospital</label>
+                <select class="form-control" id="cod_hospital" name="cod_hospital" required>
+                    <option value="" selected disabled>Selecciona un hospital</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cod_salas_espera">Codigo de la sala</label>
+                <select class="form-control" id="cod_salas_espera" name="cod_salas_espera" required>
+                    <option value="" selected disabled>Selecciona una sala</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" id="editarPacientesBtn">Editar Paciente</button>
+            <a href="pacientes.html" class="btn btn-secondary">Volver</a>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scripts = document.querySelectorAll('script[src$=".js"]');
+            if (scripts.length === 0) {
+                const messageContainer = document.createElement('div');
+                messageContainer.classList.add('alert', 'alert-danger');
+                messageContainer.textContent = 'No se encontraron archivos .js, sin ellos no se podrán mostrar los datos';
+                document.body.appendChild(messageContainer);
+            }
+        });
+    </script>
+</body>
+</html>

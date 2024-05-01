@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/css.css">
+    <title>Proyecto PRW Jonay</title>
+    <script src="../../crudjs/salas_espera/editar_salas.js"></script>
+</head>
+<body>
+    <div class="cabecera">
+        <a href="../usuario/usuario.html">Usuarios</a>
+        <a href="../hospital/hospital.html">Hospitales</a>
+        <a href="../salas_espera/salas_espera.html">Salas de Espera</a> 
+        <a href="../pacientes/pacientes.html">Pacientes</a>
+        <a href="../expediente/expediente.html">Expedientes</a>
+        <a href="../personal/personal.html">Personal</a>
+        <a href="../tipo_personal/tipo_personal.html">Tipo Personal</a>
+        <a href="../medicos/medicos.html">Medicos</a>
+        <a href="../director/director.html">Directores</a>
+        <a href="../tipo_medicos/tipo_medicos.html">Tipo Medicos</a>
+        <a href="../analista/analista.html">Analistas</a>
+        <a href="../cirujano/cirujano.html">Cirujanos</a>
+    </div>
+
+    <div class="container">
+        <h2>Datos de Usuario</h2>
+        <form id="formularioUsuario">
+            <div class="form-group">
+                <label for="id_usuario">Código del Usuario</label>
+                <input type="number" class="form-control" id="id_usuario" name="id_usuario" placeholder="" readonly>
+            </div>
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <input type="text" class="form-control" id="contrasena" name="contrasena" placeholder="" required>
+            </div>
+            <button type="button" class="btn btn-primary" id="editarUsuarioBtn">Editar Producto</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scripts = document.querySelectorAll('script[src$=".js"]');
+            if (scripts.length === 0) {
+                const messageContainer = document.createElement('div');
+                messageContainer.classList.add('alert', 'alert-danger');
+                messageContainer.textContent = 'No se encontraron archivos .js, sin ellos no se podrán mostrar los datos';
+                document.body.appendChild(messageContainer);
+            }
+        });
+    </script>
+</body>
+</html>

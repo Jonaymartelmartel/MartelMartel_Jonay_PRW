@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/css.css">
+    <title>Proyecto PRW Jonay</title>
+    <script src="../../crudjs/analista/editar_analista.js"></script>
+</head>
+<body>
+    <div class="cabecera">
+        <a href="../usuario/usuario.html">Usuarios</a>
+        <a href="../hospital/hospital.html">Hospitales</a>
+        <a href="../salas_espera/salas_espera.html">Salas de Espera</a> 
+        <a href="../pacientes/pacientes.html">Pacientes</a>
+        <a href="../expediente/expediente.html">Expedientes</a>
+        <a href="../personal/personal.html">Personal</a>
+        <a href="../tipo_personal/tipo_personal.html">Tipo Personal</a>
+        <a href="../medicos/medicos.html">Medicos</a>
+        <a href="../director/director.html">Directores</a>
+        <a href="../tipo_medicos/tipo_medicos.html">Tipo Medicos</a>
+        <a href="../analista/analista.html">Analistas</a>
+        <a href="../cirujano/cirujano.html">Cirujanos</a>
+    </div>
+
+    <div class="container">
+        <h2>Añadir Analista</h2>
+        <form id="formularioAnalista">
+            <div class="form-group">
+                <label for="cod_analista">Código de Analista</label>
+                <input type="number" class="form-control" id="cod_analista" name="cod_analista" placeholder="" readonly>
+            </div>
+            <div class="form-group">
+                <label for="num_colegiado">Numero de colegiado</label>
+                <input type="number" class="form-control" id="num_colegiado" name="num_colegiado" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="id_tipo_medicos">Codigo del tipo medico</label>
+                <select class="form-control" id="id_tipo_medicos" name="id_tipo_medicos" required>
+                    <option value="" selected disabled>Selecciona un tipo de medico</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" id="editarAnalistaBtn">Editar Analista</button>
+            <a href="analista.html" class="btn btn-secondary">Volver</a>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scripts = document.querySelectorAll('script[src$=".js"]');
+            if (scripts.length === 0) {
+                const messageContainer = document.createElement('div');
+                messageContainer.classList.add('alert', 'alert-danger');
+                messageContainer.textContent = 'No se encontraron archivos .js, sin ellos no se podrán mostrar los datos';
+                document.body.appendChild(messageContainer);
+            }
+        });
+    </script>
+</body>
+</html>
